@@ -1,7 +1,8 @@
 FROM webdevops/php-nginx:8.2
 
 ENV WEB_DOCUMENT_ROOT /app/public
-ENV APP_ENV production
+ENV APP_ENV local
+ENV APP_DEBUG true
 WORKDIR /app
 COPY . .
 
