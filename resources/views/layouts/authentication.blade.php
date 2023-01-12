@@ -13,7 +13,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-inter antialiased bg-slate-100 text-slate-600">
+    <body class="antialiased font-inter bg-slate-100 text-slate-600">
 
         <main class="bg-white">
 
@@ -22,7 +22,7 @@
                 <!-- Content -->
                 <div class="w-full md:w-1/2">
 
-                    <div class="min-h-screen h-full flex flex-col after:flex-1">
+                    <div class="flex flex-col h-full min-h-screen after:flex-1">
 
                         <!-- Header -->
                         <div class="flex-1">
@@ -47,9 +47,12 @@
                                     </svg>
                                 </a>
                             </div>
+                            @if (request()->route()->named('onboarding.*'))
+                                <x-progress-bar :step="Route::currentRouteName()" />
+                            @endif
                         </div>
 
-                        <div class="w-full max-w-sm mx-auto px-4 py-8">
+                        <div class="w-full max-w-sm px-4 py-8 mx-auto">
                             {{ $slot }}
                         </div>
 
@@ -58,13 +61,13 @@
                 </div>
 
                 <!-- Image -->
-                <div class="hidden md:block absolute top-0 bottom-0 right-0 md:w-1/2" aria-hidden="true">
+                <div class="absolute top-0 bottom-0 right-0 hidden md:block md:w-1/2" aria-hidden="true">
                     <img class="object-cover object-center w-full h-full" src="{{ asset('images/auth-image.jpg') }}" width="760" height="1024" alt="Authentication image" />
-                    <img class="absolute top-1/4 left-0 -translate-x-1/2 ml-8 hidden lg:block" src="{{ asset('images/auth-decoration.png') }}" width="218" height="224" alt="Authentication decoration" />
+                    <img class="absolute left-0 hidden ml-8 -translate-x-1/2 top-1/4 lg:block" src="{{ asset('images/auth-decoration.png') }}" width="218" height="224" alt="Authentication decoration" />
                 </div>
 
             </div>
 
-        </main>        
+        </main>
     </body>
 </html>
