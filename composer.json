@@ -10,6 +10,7 @@
         "laravel/framework": "^9.19",
         "laravel/jetstream": "^2.14",
         "laravel/sanctum": "^3.0",
+        "laravel/spark-paddle": "^2.0",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.5",
         "spatie/laravel-onboard": "^2.4",
@@ -65,5 +66,14 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./packages/spark-paddle",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
 }

@@ -7,20 +7,17 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-inter antialiased bg-slate-100 text-slate-600">
+    <body class="antialiased font-inter bg-slate-100 text-slate-600">
 
         <main class="bg-white">
 
             <!-- Content -->
             <div class="w-full">
 
-                <div class="min-h-screen h-full">
+                <div class="h-full min-h-screen">
 
                     <!-- Header -->
                     <div>
@@ -47,7 +44,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full max-w-3xl mx-auto px-4 py-8">
+                    <div class="w-full max-w-3xl px-4 py-8 mx-auto">
                         {{ $slot }}
                     </div>
 
@@ -57,6 +54,6 @@
 
             </div>
 
-        </main>        
+        </main>
     </body>
 </html>

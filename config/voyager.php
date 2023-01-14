@@ -9,11 +9,11 @@ return [
     | Here you can specify voyager user configs
     |
     */
-    'path' => env('VOYAGER_ADMIN', 'backoffice'),
+    'path' => env('VOYAGER_ADMIN', 'admin'),
     'user' => [
         'add_default_role_on_register' => true,
         'default_role'                 => 'user',
-        'default_avatar'               => 'users/default.png',
+        'default_avatar'               => asset('users/default.png'),
         'redirect'                     => '/admin',
     ],
 
