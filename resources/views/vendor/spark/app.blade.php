@@ -19,14 +19,6 @@
         {!! file_get_contents($cssPath) !!}
     </style>
 
-    @if (strpos(config('spark.brand.color'), '#') === 0)
-    <style>
-        .bg-custom-hex {
-            background-color: {!! config('spark.brand.color') !!};
-        }
-    </style>
-    @endif
-
     @inertiaHead
 </head>
 <body class="font-sans antialiased">
